@@ -13,6 +13,10 @@ const checkout = require("./src/routes/checkout.route");
 app.use("/api/v1", home);
 app.use("/api/v1", checkout);
 
+app.get("/", (req, res) => {
+  res.send("API is working...🎉");
+});
+
 app.listen(process.env.PORT, () => {
   console.log(`Listening on port ${process.env.PORT}`);
 });
